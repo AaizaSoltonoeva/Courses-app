@@ -1,0 +1,6 @@
+.env
+/myvenv
+db.splite3
+.idea
+*.pyc
+__pycache__
