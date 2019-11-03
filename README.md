@@ -21,7 +21,7 @@ What things you need to install the software and how to install them
 * requirements - pip install -r requirements.txt (This will create a requirements.txt file, which contains a simple list of all the packages in the current environment, and their respective versions).
 
  Documentation helps you understand how queries work. To view the documentation, follow link:
-https://app.apiary.io/
+https://app.apiary.io/coursesapp1/editor
 
 
 
