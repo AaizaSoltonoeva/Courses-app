@@ -2,7 +2,6 @@ from rest_framework import generics
 from .serializers import *
 from .models import *
 from rest_framework.generics import ListCreateAPIView, RetrieveDestroyAPIView
-from app.permissions import IsOwnerOrReadOnly
 
 
 class CourseList(ListCreateAPIView):

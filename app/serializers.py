@@ -26,7 +26,7 @@ class CourseSerializers(serializers.ModelSerializer):
 
     class Meta:
         model = Course
-        fields = ('name', 'description', 'category', 'logo', 'contacts', 'branches',)
+        fields = ('id', 'name', 'description', 'category', 'logo', 'contacts', 'branches',)
 
     def create(self, validate_data):
         contacts = validate_data.pop('contacts')
@@ -34,8 +34,8 @@ class CourseSerializers(serializers.ModelSerializer):
         course = Course.objects.create(**validate_data)
 
         for contact in contacts:
-            Contact.object.create(course=course, **contact)
+            Contact.objects.create(course=course, **contact)
         for branch in branches:
-            Branch.object.create(course=course, **branch)
+            Branch.objects.create(course=course, **branch)
 
         return course
